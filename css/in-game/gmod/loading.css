@@ -1,0 +1,68 @@
+html {
+    background-color: black;
+}
+
+body {
+    /*display:none;*/
+    margin: 0;
+    padding: 0;
+    color:white;
+}
+
+.fadein {
+    animation: fadein 2s;
+}
+
+.main_page {
+
+}
+
+.title {
+    border-bottom:solid;
+    border-color:black;
+    border-width:2px;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom:-10px;
+    padding-bottom:-10px;
+}
+.spinner {
+    /*margin:0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+     */
+    position:relative;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.server_info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    margin:0;
+    position: absolute;
+    top: 55%;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+#status {
+    font-size:40px;
+}
+
+#download_block {
+    font-size: 30px;
+}
+
+#map_name {
+    font-weight: 600;
+}
