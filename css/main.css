@@ -121,9 +121,50 @@ body {
     display: flex;
     width: 250px;
     height: 250px;
+    min-width: 250px;
+    min-height: 250px;
     margin-right: 25px;
     justify-content: center;
     align-items: center;
+}
+
+.game-info {
+    width: 100%;
+}
+
+.game-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.game-status {
+    display: flex;
+    align-items: center;
+    float: right;
+    font-size: 25px;
+}
+
+.game-players {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.online {
+    background-color: lime;
+}
+
+.offline {
+    background-color: red;
 }
 
 @keyframes fade-in {

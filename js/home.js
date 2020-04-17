@@ -24,7 +24,7 @@ async function display_games() {
         let title = games[game]["title"];
         let players = games[game]["player_count"];
         let max_players = games[game]["max_player_count"]
-        let map_name = games[game]["map_name"]
+        let map_name = games[game]["map_name"] || "";
         let connect = games[game]["connect"];
         let logo_id = game + "_logo";
 
@@ -32,12 +32,28 @@ async function display_games() {
         if(connect) {
             href=`href="${connect}"`;
         }
+        let status = "offline";
+        if (online) {
+            status = "online";
+        }
+        let player_count = "";
+        if (players !== null && max_players !== null) {
+            player_count = `${players}/${max_players} players online`;
+        }
 
         container.innerHTML += `
         <a class="content container body game button" ${href}>
             <img src=${image.src} class="game-logo" id="${logo_id}" alt="Game Logo">
-            <div>
-                ${title}
+            <div class="game-info">
+                <div class="game-status">
+                    ${map_name} <span class="dot ${status}"></span>
+                </div>
+                <div class="game-title">
+                    ${title}
+                </div>
+                <div class="game-players">
+                 ${player_count}
+                </div>
             </div>
         </a>
         `;
