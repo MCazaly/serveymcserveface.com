@@ -1,6 +1,6 @@
 const spinners = ["bafl", "bmo", "camper", "fakas", "mafn", "megafire", "n00beh", "tsouki", "kean", "weirdwolf", "jay", "randomgamer"];
 const spinner_name = spinners[Math.floor(Math.random() * spinners.length)];
-const spinner_src = "images/avatars/" + spinner_name + ".png";
+const spinner_src = "/assets/images/avatars/" + spinner_name + ".png";
 const spinner = new Image();
 spinner.src = spinner_src;
 
@@ -24,8 +24,12 @@ var files_needed = 0;
 var file_downloading;
 var status = "";
 var rotation = 0;
+var debug = false;
 
-const debug = false;
+if (window.location.toString().indexOf("?debug=true") !== -1) {
+    debug = true;
+}
+
 
 // Garry's Mod Functions
 function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode) {
