@@ -2,31 +2,144 @@ body {
     background-color: black;
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 
 .content {
     background-color: #1A1A1B;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
     border: solid 1px #343536;
 }
 
+.body {
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
 .header {
     width: 100%;
     height: 80px;
     display: flex;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .logo-holder {
     display: flex;
     align-items: center;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
+    font-weight: 400;
+    font-size: 30px;
+    min-width: 400px;
 }
 
 .logo {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.plain-link, .plain-link:hover, .plain-link:active, .plain-link:visited, .plain-link:focus {
+    text-decoration: none;
+    color: white;
+}
+
+.navi-menu {
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+.navi-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 30px;
+    height: 100%;
+    width: 140px;
+}
+
+.navi-button:hover, .navi-button:active, .navi-button:focus {
+    background-color: #3E3E41;
+    text-decoration: none;
+    color: white;
+}
+
+.button, .button:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover, .button:active, .button:focus {
+    background-color: #3E3E41;
+    text-decoration: none;
+    color: white;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    font-weight:200;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.loading-indicator {
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#games-container {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.game {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.game-logo {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin-right: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+    }
 }
