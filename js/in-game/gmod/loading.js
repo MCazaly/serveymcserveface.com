@@ -82,6 +82,9 @@ function showPage() {
 
 function renderSpinner() {
     document.getElementById("spinner").src = spinner_src;
+    if (meme) {
+        document.getElementById("astley").play();
+    }
 }
 
 function advanceSpinner() {
