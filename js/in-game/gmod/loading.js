@@ -26,11 +26,11 @@ var status = "";
 var rotation = 0;
 var meme = window.location.toString().indexOf("meme=true") !== -1;
 var today = new Date();
-var april_fools = today.getMonth() === 3 && today.getDate() === 18;
+var april_fools = today.getMonth() === 3 && today.getDate() === 1;
 var debug = window.location.toString().indexOf("debug=true") !== -1
 
 
-if (meme || april_fools) {
+if (meme || april_fools || Math.ceil(Math.random() * 100) === 100) {
     meme = true;
     spinner_src = "../../assets/images/astley.gif"
 }
