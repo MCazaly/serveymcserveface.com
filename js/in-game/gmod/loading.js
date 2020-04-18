@@ -1,6 +1,6 @@
 const spinners = ["bafl", "bmo", "camper", "fakas", "mafn", "megafire", "n00beh", "tsouki", "kean", "weirdwolf", "jay", "randomgamer"];
 const spinner_name = spinners[Math.floor(Math.random() * spinners.length)];
-const spinner_src = "/assets/images/avatars/" + spinner_name + ".png";
+var spinner_src = "../../assets/images/avatars/" + spinner_name + ".png";
 const spinner = new Image();
 spinner.src = spinner_src;
 
@@ -25,9 +25,15 @@ var file_downloading;
 var status = "";
 var rotation = 0;
 var debug = false;
+var meme = false;
 
-if (window.location.toString().indexOf("?debug=true") !== -1) {
+if (window.location.toString().indexOf("debug=true") !== -1) {
     debug = true;
+}
+
+if (window.location.toString().indexOf("meme=true") !== -1) {
+    meme = true;
+    spinner_src = "../../assets/images/astley.gif"
 }
 
 
