@@ -24,14 +24,13 @@ var files_needed = 0;
 var file_downloading;
 var status = "";
 var rotation = 0;
-var debug = false;
-var meme = false;
+var meme = window.location.toString().indexOf("meme=true") !== -1;
+var today = new Date();
+var april_fools = today.getMonth() === 3 && today.getDate() === 18;
+var debug = window.location.toString().indexOf("debug=true") !== -1
 
-if (window.location.toString().indexOf("debug=true") !== -1) {
-    debug = true;
-}
 
-if (true || window.location.toString().indexOf("meme=true") !== -1) {
+if (meme || april_fools) {
     meme = true;
     spinner_src = "../../assets/images/astley.gif"
 }
