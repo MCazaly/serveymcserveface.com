@@ -1,6 +1,6 @@
 const spinners = ["bafl", "bmo", "camper", "fakas", "mafn", "megafire", "n00beh", "tsouki", "kean", "weirdwolf", "jay", "randomgamer"];
 const spinner_name = spinners[Math.floor(Math.random() * spinners.length)];
-const spinner_src = "/assets/images/avatars/" + spinner_name + ".png";
+var spinner_src = "../../assets/images/avatars/" + spinner_name + ".png";
 const spinner = new Image();
 spinner.src = spinner_src;
 
@@ -24,11 +24,18 @@ var files_needed = 0;
 var file_downloading;
 var status = "";
 var rotation = 0;
-var debug = false;
+var meme = window.location.toString().indexOf("meme=true") !== -1;
+var today = new Date();
+var april_fools = today.getMonth() === 3 && today.getDate() === 1;
+var debug = window.location.toString().indexOf("debug=true") !== -1
 
-if (window.location.toString().indexOf("?debug=true") !== -1) {
-    debug = true;
+
+if (meme || april_fools || Math.ceil(Math.random() * 100) === 100) {
+    meme = true;
+    spinner_src = "../../assets/images/astley.gif"
 }
+
+
 
 
 // Garry's Mod Functions
@@ -76,6 +83,9 @@ function showPage() {
 
 function renderSpinner() {
     document.getElementById("spinner").src = spinner_src;
+    if (meme) {
+        document.getElementById("astley").play();
+    }
 }
 
 function advanceSpinner() {
