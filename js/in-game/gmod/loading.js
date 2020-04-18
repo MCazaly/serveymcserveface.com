@@ -31,10 +31,12 @@ if (window.location.toString().indexOf("debug=true") !== -1) {
     debug = true;
 }
 
-if (window.location.toString().indexOf("meme=true") !== -1) {
+if (true || window.location.toString().indexOf("meme=true") !== -1) {
     meme = true;
     spinner_src = "../../assets/images/astley.gif"
 }
+
+
 
 
 // Garry's Mod Functions
