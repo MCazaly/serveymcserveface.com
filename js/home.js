@@ -42,7 +42,7 @@ async function display_games() {
         }
 
         container.innerHTML += `
-        <a class="content container body game button" ${href}>
+        <a class="content container game button" ${href}>
             <img src=${image.src} class="game-logo" id="${logo_id}" alt="Game Logo">
             <div class="game-info">
                 <div class="game-status">
