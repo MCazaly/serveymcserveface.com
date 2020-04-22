@@ -1,0 +1,20 @@
+{
+  "games": {
+    "title": "\uD83C\uDFAE Games",
+    "description": "Game server status info.",
+    "url": "https://games.api.serveymcserveface.com",
+    "online": true
+  },
+  "identity": {
+    "title": "\uD83D\uDD12 Identity",
+    "description": "Discord-based authentication and access control.",
+    "url": "https://identity.api.serveymcserveface.com",
+    "online": true
+  },
+  "mirorbot": {
+    "title": "\uD83C\uDFB5 Miror B.ot",
+    "description": "Miror B.ot Announce Sound management.",
+    "url": "https://mirorbot.api.serveymcserveface.com",
+    "online": false
+  }
+}

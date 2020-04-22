@@ -17,20 +17,32 @@
         </div>
     </a>
     <div class="content navi-menu">
-        <a class="button navi-button" href="/#games">
+        <a class="button navi-button" href="javascript:focus('games')">
             Games
         </a>
-        <a class="button navi-button" href="http://api.serveymcserveface.com">
+        <a class="button navi-button" href="javascript:focus('api')">
             API
         </a>
     </div>
 </div>
 
-<h1 class="section-title" id="games">
-    Games
-    <img src="./assets/images/loading.svg" class="loading-indicator" alt="Loading...">
-</h1>
-<div id="games-container">
+<a href="javascript:toggle_section('games-container')" class="plain-link">
+    <h1 class="section-title" id="games" onclick="">
+        Games
+        <img src="./assets/images/loading.svg" class="loading-indicator" alt="Loading...">
+    </h1>
+</a>
+
+<div id="games-container" class="section-container">
+</div>
+
+<a href="javascript:toggle_section('api-container')" class="plain-link">
+    <h1 class="section-title" id="api">
+        API
+        <img src="./assets/images/loading.svg" class="loading-indicator" alt="Loading...">
+    </h1>
+</a>
+<div id="api-container" class="section-container">
 </div>
 
 

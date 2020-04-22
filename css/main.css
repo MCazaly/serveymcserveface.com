@@ -39,6 +39,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+
 }
 
 .logo-holder {
@@ -104,6 +105,17 @@ body {
     margin-left: 10px;
 }
 
+.section-container {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 100vw;
+    display: grid;
+    justify-items: center;
+}
+
 .loading-indicator {
     height: 32px;
     width: 32px;
@@ -113,15 +125,7 @@ body {
 }
 
 #games-container {
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 100vw;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(min(600px, 100vw), 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(min(600px, 100vw), 1fr));
 }
 
 .game {
@@ -188,6 +192,55 @@ body {
 .offline {
     background-color: red;
 }
+
+#api-container {
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100vw), 1fr))
+}
+
+.api {
+    display: block;
+    font-weight: 200;
+    float: left;
+    margin-right: 0;
+    min-width: min(400px, 100vw);
+    width: 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    grid-auto-columns: auto;
+    object-fit: contain;
+}
+
+.api-status {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: 5px;
+}
+
+.api-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.api-info {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.api-url {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
 
 @keyframes fade-in {
     from {
