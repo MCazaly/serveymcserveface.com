@@ -95,6 +95,7 @@ function advanceSpinner() {
 
 window.onload = function() {
     console.log("HERE WE GO!");
+    console.log("User Agent: " + window.navigator.userAgent);
     if(debug) {
         GameDetails(
             "ServeyMcServeface",
