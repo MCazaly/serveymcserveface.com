@@ -27,15 +27,14 @@ var rotation = 0;
 var meme = window.location.toString().indexOf("meme=true") !== -1;
 var today = new Date();
 var april_fools = today.getMonth() === 3 && today.getDate() === 1;
-var debug = window.location.toString().indexOf("debug=true") !== -1
+var debug = window.location.toString().indexOf("debug=true") !== -1;
+var old = window.navigator.userAgent.indexOf("Awesomium") !== -1;
 
 
 if (meme || april_fools || Math.ceil(Math.random() * 100) === 100) {
     meme = true;
     spinner_src = "../../assets/images/astley.gif"
 }
-
-
 
 
 // Garry's Mod Functions
@@ -62,13 +61,22 @@ function DownloadingFile(name) {
 }
 
 function SetStatusChanged(gmod_status) {
-    if(gmod_status.indexOf(" Loading ") !== -1) {
-        status = "Loading addons...";
-        load_status = gmod_status;
+    var status = "";
+    var load_status = "";
+
+    if (old) {
+        status = "You're using a version of GMod with an outdated embedded browser!";
+        load_status = "Please update by selecting a \"chromium\" branch from the BETAS tab in Steam's properties.";
     } else {
-        status = messages[Math.floor(Math.random() * messages.length)];
-        load_status = "";
+        if(gmod_status.indexOf(" Loading ") !== -1) {
+            status = "Loading addons...";
+            load_status = gmod_status;
+        } else {
+            status = messages[Math.floor(Math.random() * messages.length)];
+            load_status = "";
+        }
     }
+
     document.getElementById("status").innerText = status;
     document.getElementById("loading").innerText = load_status;
 }
@@ -92,6 +100,7 @@ function advanceSpinner() {
     rotation += 1;
     document.getElementById("spinner").style.webkitTransform = "rotate("+rotation+"deg)";
 }
+
 
 window.onload = function() {
     console.log("HERE WE GO!");
