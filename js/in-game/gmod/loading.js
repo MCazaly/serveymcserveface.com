@@ -66,7 +66,7 @@ function SetStatusChanged(gmod_status) {
 
     if (old) {
         status = "You're using a version of GMod with an outdated embedded browser!";
-        load_status = "Please update by selecting a \"chromium\" branch from the BETAS tab in Steam's properties.";
+        load_status = "Please update by selecting a \"chromium\" branch from the BETAS tab in Steam's properties menu.";
     } else {
         if(gmod_status.indexOf(" Loading ") !== -1) {
             status = "Loading addons...";
