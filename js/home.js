@@ -39,8 +39,10 @@ async function display_games() {
             href=`href="${connect}"`;
         }
         let status = "offline";
-        if (online) {
+        if (online === true) {
             status = "online";
+        } else if (typeof(online) === "string") {
+            status = online;
         }
         let player_count = "";
         if (players !== null && max_players !== null) {
