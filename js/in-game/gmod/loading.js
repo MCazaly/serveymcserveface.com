@@ -273,6 +273,11 @@ window.onload = function() {
             '        }\n' +
             '\n' +
             '        show_patrons().then();');
+    } else {
+        var board = document.getElementById("patrons");
+        board.innerHTML = "<div class=\"patron\">There would be a cool list of Patrons here if you weren't using a " +
+            "terrible embedded browser from 2004."
+        board.style.display = "block";
     }
 };
 
