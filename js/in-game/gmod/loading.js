@@ -224,55 +224,55 @@ window.onload = function() {
     }
 
     if(!old) {
-        async function get_patrons() {
-            let response = await fetch(PATRONS_URL);
-            return await response.json();
-        }
-
-        async function show_patrons() {
-            let patrons = await get_patrons()
-            let loop = 1;
-            let patrons_html = "";
-            for (let ii in patrons) {
-                let patron = patrons[ii];
-                var name = patron["name"];
-                if (name.length > 18) {  // Shorten name length to something acceptable and abbreviate
-                    name = name.slice(0,17) + "…";
-                }
-                let tier = patron["tier"];
-                let dosh = patron["lifetime_amount"].toFixed(2);
-                let special = "";
-                if (loop === 1) {
-                    special = "legendary";
-                } else if (loop === 2) {
-                    special = "epic";
-                } else if (loop === 3) {
-                    special = "cool";
-                }
-                loop++;
-
-                patrons_html += `` +
-                    `<div class="patron ${special}">\n` +
-                    `    <div class="patron-name">\n` +
-                    `        ${name}\n` +
-                    `    </div>\n` +
-                    `    <div class="patron-tier">\n` +
-                    `        ${tier}\n` +
-                    `    </div>\n` +
-                    `    <div class=patron-amount>\n` +
-                    `        £${dosh}\n` +
-                    `    </div>\n` +
-                    `</div>`
-                if (ii >= 16) {
-                    break;
-                }
-            }
-            let board = document.getElementById("patrons");
-            board.innerHTML += patrons_html;
-            board.style.display = "block";
-        }
-
-        show_patrons().then();
+        eval('async function get_patrons() {\n' +
+            '            let response = await fetch(PATRONS_URL);\n' +
+            '            return await response.json();\n' +
+            '        }\n' +
+            '\n' +
+            '        async function show_patrons() {\n' +
+            '            let patrons = await get_patrons()\n' +
+            '            let loop = 1;\n' +
+            '            let patrons_html = "";\n' +
+            '            for (let ii in patrons) {\n' +
+            '                let patron = patrons[ii];\n' +
+            '                var name = patron["name"];\n' +
+            '                if (name.length > 18) {  // Shorten name length to something acceptable and abbreviate\n' +
+            '                    name = name.slice(0,17) + "…";\n' +
+            '                }\n' +
+            '                let tier = patron["tier"];\n' +
+            '                let dosh = patron["lifetime_amount"].toFixed(2);\n' +
+            '                let special = "";\n' +
+            '                if (loop === 1) {\n' +
+            '                    special = "legendary";\n' +
+            '                } else if (loop === 2) {\n' +
+            '                    special = "epic";\n' +
+            '                } else if (loop === 3) {\n' +
+            '                    special = "cool";\n' +
+            '                }\n' +
+            '                loop++;\n' +
+            '\n' +
+            '                patrons_html += `` +\n' +
+            '                    `<div class="patron ${special}">\\n` +\n' +
+            '                    `    <div class="patron-name">\\n` +\n' +
+            '                    `        ${name}\\n` +\n' +
+            '                    `    </div>\\n` +\n' +
+            '                    `    <div class="patron-tier">\\n` +\n' +
+            '                    `        ${tier}\\n` +\n' +
+            '                    `    </div>\\n` +\n' +
+            '                    `    <div class=patron-amount>\\n` +\n' +
+            '                    `        £${dosh}\\n` +\n' +
+            '                    `    </div>\\n` +\n' +
+            '                    `</div>`\n' +
+            '                if (ii >= 16) {\n' +
+            '                    break;\n' +
+            '                }\n' +
+            '            }\n' +
+            '            let board = document.getElementById("patrons");\n' +
+            '            board.innerHTML += patrons_html;\n' +
+            '            board.style.display = "block";\n' +
+            '        }\n' +
+            '\n' +
+            '        show_patrons().then();');
     }
 };
 
