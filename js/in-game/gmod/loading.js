@@ -231,7 +231,7 @@ window.onload = function() {
 async function get_patrons() {
     let response = await fetch(PATRONS_URL);
     return await response.json();
-}
+};
 
 async function show_patrons() {
     let patrons = await get_patrons()
@@ -274,4 +274,4 @@ async function show_patrons() {
     let board = document.getElementById("patrons");
     board.innerHTML += patrons_html;
     board.style.display = "block";
-}
+};
