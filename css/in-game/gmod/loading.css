@@ -68,3 +68,79 @@ h2 {
 #map_name {
     font-weight: 600;
 }
+
+.patrons {
+    width:40vh;
+    height:50vh;
+    margin-top:5%;
+    margin-left:5%;
+    background-color:#BAFFFF60;
+    z-index:255;
+    position:absolute;
+    border:2px solid white;
+    border-radius:50px;
+    display:none; /* Block */
+}
+
+.patrons-title {
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 2vh;
+    text-shadow: 0 0 0.5vh black;
+}
+
+.patron {
+    font-size: 1.75vh;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    display: flex;
+    justify-items: center;
+    text-shadow: 0 0 0.25vh black;
+}
+
+.patron-name {
+    flex: 1;
+
+    max-width: 20vh;
+    min-width: 20vh;
+}
+
+.patron-tier {
+    flex: 1;
+    text-align: center;
+}
+
+.patron-amount {
+    flex: 1;
+    text-align: right;
+}
+
+.leaders {
+    font-weight: bold;
+}
+
+.legendary {
+    color: white;
+    animation: legendary-glow 1.5s ease-in-out infinite alternate;
+}
+
+.epic {
+    color: white;
+    text-shadow: 0 0 1vh #FF4294;
+}
+
+.cool {
+    color: white;
+    text-shadow: 0 0 1vh #47B2FF;
+}
+
+@keyframes legendary-glow {
+    from {
+        text-shadow: 0 0 0.1vh white, 0 0 0.2vh white, 0 0 0.3vh #FFD100, 0 0 0.4vh #FFD100, 0 0 0.5vh #FFD100, 0 0 0.6vh #FFD100;
+    }
+    to {
+        text-shadow: 0 0 0.1vh white, 0 0 0.2vh #FFDE00, 0 0 0.3vh #FFDE00, 0 0 0.4vh #FFDE00, 0 0 0.5vh #FFDE00, 0 0 0.6vh #FFDE00;
+    }
+}

@@ -12,6 +12,7 @@ var tram_left = -tram_size;
 const astley = "../../assets/audio/astley.ogg";
 const chevere = "../../assets/audio/que_chevere.ogg"
 var status = "";
+const PATRONS_URL = "https://patrons.api.serveymcserveface.com/patrons/sorted"
 
 const messages = [
     "Extending Bafl's hitbox...",
@@ -207,6 +208,55 @@ function play_music(src) {
     player.play()
 }
 
+async function get_patrons() {
+    let response = await fetch(PATRONS_URL);
+    return await response.json();
+}
+
+async function show_patrons() {
+    let patrons = await get_patrons()
+    let loop = 1;
+    let patrons_html = "";
+    for (let ii in patrons) {
+        let patron = patrons[ii];
+        var name = patron["name"];
+        if (name.length > 18) {  // Shorten name length to something acceptable and abbreviate
+            name = name.slice(0,17) + "…";
+        }
+        let tier = patron["tier"];
+        let dosh = patron["lifetime_amount"].toFixed(2);
+        let special = "";
+        if (loop === 1) {
+            special = "legendary";
+        } else if (loop === 2) {
+            special = "epic";
+        } else if (loop === 3) {
+            special = "cool";
+        }
+        loop++;
+
+        patrons_html += `` +
+            `<div class="patron ${special}">\n` +
+            `    <div class="patron-name">\n` +
+            `        ${name}\n` +
+            `    </div>\n` +
+            `    <div class="patron-tier">\n` +
+            `        ${tier}\n` +
+            `    </div>\n` +
+            `    <div class=patron-amount>\n` +
+            `        £${dosh}\n` +
+            `    </div>\n` +
+            `</div>`
+        if (ii >= 16) {
+            break;
+        }
+    }
+    let board = document.getElementById("patrons");
+    board.innerHTML += patrons_html;
+    board.style.display = "block";
+}
+
+
 
 window.onload = function() {
     console.log("HERE WE GO!");
@@ -220,6 +270,10 @@ window.onload = function() {
             "76561197995176031",
             "terrortown"
         );
+    }
+
+    if(!old) {
+        show_patrons().then();
     }
 };
 
