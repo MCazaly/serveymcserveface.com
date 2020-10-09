@@ -208,6 +208,26 @@ function play_music(src) {
     player.play()
 }
 
+
+window.onload = function() {
+    console.log("HERE WE GO!");
+    console.log("User Agent: " + window.navigator.userAgent);
+    if(debug) {
+        GameDetails(
+            "ServeyMcServeface",
+            "https://serveymcserveface.com/gameserver/gmod/ttt/loading.html",
+            "ttt_minecraft",
+            8,
+            "76561197995176031",
+            "terrortown"
+        );
+    }
+
+    if(!old) {
+        show_patrons().then();
+    }
+};
+
 async function get_patrons() {
     let response = await fetch(PATRONS_URL);
     return await response.json();
@@ -255,25 +275,3 @@ async function show_patrons() {
     board.innerHTML += patrons_html;
     board.style.display = "block";
 }
-
-
-
-window.onload = function() {
-    console.log("HERE WE GO!");
-    console.log("User Agent: " + window.navigator.userAgent);
-    if(debug) {
-        GameDetails(
-            "ServeyMcServeface",
-            "https://serveymcserveface.com/gameserver/gmod/ttt/loading.html",
-            "ttt_minecraft",
-            8,
-            "76561197995176031",
-            "terrortown"
-        );
-    }
-
-    if(!old) {
-        show_patrons().then();
-    }
-};
-
