@@ -240,7 +240,6 @@ window.onload = function() {
             '                    name = name.slice(0,17) + "…";\n' +
             '                }\n' +
             '                let tier = patron["tier"];\n' +
-            '                let dosh = patron["lifetime_amount"].toFixed(2);\n' +
             '                let special = "";\n' +
             '                if (loop === 1) {\n' +
             '                    special = "legendary";\n' +
@@ -249,7 +248,6 @@ window.onload = function() {
             '                } else if (loop === 3) {\n' +
             '                    special = "cool";\n' +
             '                }\n' +
-            '                loop++;\n' +
             '\n' +
             '                patrons_html += `` +\n' +
             '                    `<div class="patron ${special}">\\n` +\n' +
@@ -260,12 +258,13 @@ window.onload = function() {
             '                    `        ${tier}\\n` +\n' +
             '                    `    </div>\\n` +\n' +
             '                    `    <div class=patron-amount>\\n` +\n' +
-            '                    `        £${dosh}\\n` +\n' +
+            '                    `        #${loop}\\n` +\n' +
             '                    `    </div>\\n` +\n' +
             '                    `</div>`\n' +
             '                if (ii >= 16) {\n' +
             '                    break;\n' +
             '                }\n' +
+            '                loop++;\n' +
             '            }\n' +
             '            let board = document.getElementById("patrons");\n' +
             '            board.innerHTML += patrons_html;\n' +
