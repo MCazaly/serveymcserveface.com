@@ -1,4 +1,18 @@
-const spinners = ["bafl", "bmo", "camper", "fakas", "mafn", "megafire", "n00beh", "tsouki", "kean", "weirdwolf", "jay", "randomgamer"];
+const spinners = [
+    "bafl",
+    "bmo",
+    "camper",
+    "fakas",
+    "mafn",
+    "megafire",
+    "n00beh",
+    "tsouki",
+    "kean",
+    "weirdwolf",
+    "jay",
+    "randomgamer",
+    "jake"
+];
 const spinner_name = spinners[Math.floor(Math.random() * spinners.length)];
 var spinner_src = "../../assets/images/avatars/" + spinner_name + ".png";
 const spinner = new Image();
