@@ -1,0 +1,253 @@
+{
+    "spec_version": "v1.18",
+    "identifier": "servey-pack",
+    "name": "servey-pack",
+    "abstract": "Sick mods",
+    "author": [
+        "Fakas"
+    ],
+    "version": "2021.05.30.07.42.56",
+    "ksp_version_min": "1.11.2",
+    "ksp_version_max": "1.11.2",
+    "license": [
+        "unknown"
+    ],
+    "depends": [
+        {
+            "name": "MakingHistory-DLC",
+            "version": "1.11.0"
+        },
+        {
+            "name": "BreakingGround-DLC",
+            "version": "1.6.0"
+        },
+        {
+            "name": "Chatterer",
+            "version": "0.9.99"
+        },
+        {
+            "name": "CommunityTechTree",
+            "version": "1:3.4.3"
+        },
+        {
+            "name": "ConnectedLivingSpace",
+            "version": "2.0.0.6"
+        },
+        {
+            "name": "DockingPortAlignmentIndicator",
+            "version": "6.9.2.2"
+        },
+        {
+            "name": "EasyVesselSwitch",
+            "version": "2.2"
+        },
+        {
+            "name": "HideEmptyTechNodes",
+            "version": "1.3.0"
+        },
+        {
+            "name": "InterstellarFuelSwitch",
+            "version": "3.29.4"
+        },
+        {
+            "name": "KAS",
+            "version": "1.7"
+        },
+        {
+            "name": "KerbalEngineerRedux",
+            "version": "1.1.8.3"
+        },
+        {
+            "name": "KerbalPlanetaryBaseSystems",
+            "version": "v1.6.14"
+        },
+        {
+            "name": "KIS",
+            "version": "1.28"
+        },
+        {
+            "name": "LunaMultiplayer",
+            "version": "0.27.0"
+        },
+        {
+            "name": "Mk2Expansion",
+            "version": "2:1.9"
+        },
+        {
+            "name": "Mk3Expansion",
+            "version": "1.6"
+        },
+        {
+            "name": "NearFutureConstruction",
+            "version": "1.3.1"
+        },
+        {
+            "name": "NearFutureElectrical",
+            "version": "1.2.2"
+        },
+        {
+            "name": "NearFutureExploration",
+            "version": "1.1.1"
+        },
+        {
+            "name": "NearFuturePropulsion",
+            "version": "1.3.3"
+        },
+        {
+            "name": "NearFutureSolar",
+            "version": "1.3.1"
+        },
+        {
+            "name": "NearFutureSpacecraft",
+            "version": "1.4.1"
+        },
+        {
+            "name": "Scatterer",
+            "version": "3:v0.0770"
+        },
+        {
+            "name": "ShipManifest",
+            "version": "6.0.2.0"
+        },
+        {
+            "name": "StationPartsExpansionRedux",
+            "version": "1.4.0"
+        },
+        {
+            "name": "surfacelights",
+            "version": "1.18"
+        },
+        {
+            "name": "TACLS",
+            "version": "1:V0.17.0.0"
+        },
+        {
+            "name": "TweakScale",
+            "version": "v2.4.5.0"
+        },
+        {
+            "name": "KSPInterstellarExtended",
+            "version": "1.28.9"
+        },
+        {
+            "name": "PatchManager",
+            "version": "0.0.17.2"
+        },
+        {
+            "name": "ReStock",
+            "version": "1.3.1"
+        },
+        {
+            "name": "ReStockPlus",
+            "version": "1.3.1"
+        },
+        {
+            "name": "Waterfall",
+            "version": "0.6.3"
+        },
+        {
+            "name": "NearFutureElectrical-DecayingRTGs",
+            "version": "1.2.2"
+        },
+        {
+            "name": "OuterPlanetsMod",
+            "version": "2:2.2.9"
+        },
+        {
+            "name": "DeepFreeze",
+            "version": "V0.30.0.0"
+        },
+        {
+            "name": "ModuleManager",
+            "version": "4.1.4"
+        },
+        {
+            "name": "SpaceXLegs",
+            "version": "2.9.1"
+        },
+        {
+            "name": "Scatterer-sunflare",
+            "version": "3:v0.0770"
+        },
+        {
+            "name": "InterstellarFuelSwitch-Core",
+            "version": "3.29.4"
+        },
+        {
+            "name": "CommunityCategoryKit",
+            "version": "v5.2.0.0"
+        },
+        {
+            "name": "CommunityResourcePack",
+            "version": "1.4.2"
+        },
+        {
+            "name": "B9PartSwitch",
+            "version": "v2.18.0"
+        },
+        {
+            "name": "NearFutureElectrical-Core",
+            "version": "1.2.2"
+        },
+        {
+            "name": "DynamicBatteryStorage",
+            "version": "2:2.2.2.0"
+        },
+        {
+            "name": "NearFutureSolar-Core",
+            "version": "1.3.1"
+        },
+        {
+            "name": "NearFutureProps",
+            "version": "1:0.6.4"
+        },
+        {
+            "name": "Scatterer-config",
+            "version": "3:v0.0770"
+        },
+        {
+            "name": "BackgroundResources",
+            "version": "1:V0.17.0.0"
+        },
+        {
+            "name": "KSP-Recall",
+            "version": "v0.2.0.0"
+        },
+        {
+            "name": "ToolbarController",
+            "version": "1:0.1.9.4"
+        },
+        {
+            "name": "ClickThroughBlocker",
+            "version": "1:0.1.10.15"
+        },
+        {
+            "name": "ZeroMiniAVC",
+            "version": "1:1.1.0.1"
+        },
+        {
+            "name": "Kopernicus",
+            "version": "2:release-1.11.1-38"
+        },
+        {
+            "name": "ModularFlightIntegrator",
+            "version": "1.2.10.0"
+        },
+        {
+            "name": "CommunityTerrainTexturePack",
+            "version": "1:1.0.4"
+        },
+        {
+            "name": "REPOSoftTech-Agencies",
+            "version": "V1.5.9.0"
+        },
+        {
+            "name": "Trajectories",
+            "version": "v2.4.0"
+        }
+    ],
+    "recommends": [],
+    "suggests": [],
+    "kind": "metapackage",
+    "release_date": "2021-05-30T08:42:56.7556535+01:00"
+}
