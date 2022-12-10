@@ -1,5 +1,5 @@
-const games_url = "https://games.api.serveymcserveface.com/all";
-const api_url = "https://api.serveymcserveface.com/all"
+const games_url = "https://api.serveymcserveface.com/games/all";
+const api_url = "https://api.serveymcserveface.com/index/all"
 
 let images_loaded = 0;
 let image_count = 0;
