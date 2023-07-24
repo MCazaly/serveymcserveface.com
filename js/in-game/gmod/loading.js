@@ -31,14 +31,14 @@ const PATRONS_URL = "https://patrons.api.serveymcserveface.com/patrons/sorted"
 const messages = [
     "Extending Bafl's hitbox...",
     "Raising BMO's karma...",
-    "Discombobulating Camper...",
+    "Discombobulating Camber...",
     "Removing Fakas from your head...",
     "Yeeting Mafn out of an airlock...",
     "Turning MegaFire's corpse into a bomb...",
     "Spawning an explosive barrel near n00beh...",
     "Lowering Tsouki's karma...",
     "Infecting Kean...",
-    "Yiffing WeirdWolf...",
+    "Redirecting WeirdWolf to https://www.furaffinity.com...",
     "Deleting Jay's textures...",
     "Distracting RandomGamer with breasts..."
 ];
@@ -236,61 +236,62 @@ window.onload = function() {
             "terrortown"
         );
     }
-
-    if(!old) {
-        eval('async function get_patrons() {\n' +
-            '            let response = await fetch(PATRONS_URL);\n' +
-            '            return await response.json();\n' +
-            '        }\n' +
-            '\n' +
-            '        async function show_patrons() {\n' +
-            '            let patrons = await get_patrons()\n' +
-            '            let loop = 1;\n' +
-            '            let patrons_html = "";\n' +
-            '            for (let ii in patrons) {\n' +
-            '                let patron = patrons[ii];\n' +
-            '                var name = patron["name"];\n' +
-            '                if (name.length > 18) {  // Shorten name length to something acceptable and abbreviate\n' +
-            '                    name = name.slice(0,17) + "…";\n' +
-            '                }\n' +
-            '                let tier = patron["tier"];\n' +
-            '                let special = "";\n' +
-            '                if (loop === 1) {\n' +
-            '                    special = "legendary";\n' +
-            '                } else if (loop === 2) {\n' +
-            '                    special = "epic";\n' +
-            '                } else if (loop === 3) {\n' +
-            '                    special = "cool";\n' +
-            '                }\n' +
-            '\n' +
-            '                patrons_html += `` +\n' +
-            '                    `<div class="patron ${special}">\\n` +\n' +
-            '                    `    <div class="patron-name">\\n` +\n' +
-            '                    `        ${name}\\n` +\n' +
-            '                    `    </div>\\n` +\n' +
-            '                    `    <div class="patron-tier">\\n` +\n' +
-            '                    `        ${tier}\\n` +\n' +
-            '                    `    </div>\\n` +\n' +
-            '                    `    <div class=patron-amount>\\n` +\n' +
-            '                    `        #${loop}\\n` +\n' +
-            '                    `    </div>\\n` +\n' +
-            '                    `</div>`\n' +
-            '                if (ii >= 16) {\n' +
-            '                    break;\n' +
-            '                }\n' +
-            '                loop++;\n' +
-            '            }\n' +
-            '            let board = document.getElementById("patrons");\n' +
-            '            board.innerHTML += patrons_html;\n' +
-            '            board.style.display = "block";\n' +
-            '        }\n' +
-            '\n' +
-            '        show_patrons().then();');
-    } else {
-        var board = document.getElementById("patrons");
-        board.innerHTML = "<div class=\"patron\">There would be a cool list of Patrons here if you weren't using a " +
-            "terrible embedded browser from 2004."
-        board.style.display = "block";
-    }
+    
+    // Patrons board disabled until the new API is available.
+    // if(!old) {
+    //     eval('async function get_patrons() {\n' +
+    //         '            let response = await fetch(PATRONS_URL);\n' +
+    //         '            return await response.json();\n' +
+    //         '        }\n' +
+    //         '\n' +
+    //         '        async function show_patrons() {\n' +
+    //         '            let patrons = await get_patrons()\n' +
+    //         '            let loop = 1;\n' +
+    //         '            let patrons_html = "";\n' +
+    //         '            for (let ii in patrons) {\n' +
+    //         '                let patron = patrons[ii];\n' +
+    //         '                var name = patron["name"];\n' +
+    //         '                if (name.length > 18) {  // Shorten name length to something acceptable and abbreviate\n' +
+    //         '                    name = name.slice(0,17) + "…";\n' +
+    //         '                }\n' +
+    //         '                let tier = patron["tier"];\n' +
+    //         '                let special = "";\n' +
+    //         '                if (loop === 1) {\n' +
+    //         '                    special = "legendary";\n' +
+    //         '                } else if (loop === 2) {\n' +
+    //         '                    special = "epic";\n' +
+    //         '                } else if (loop === 3) {\n' +
+    //         '                    special = "cool";\n' +
+    //         '                }\n' +
+    //         '\n' +
+    //         '                patrons_html += `` +\n' +
+    //         '                    `<div class="patron ${special}">\\n` +\n' +
+    //         '                    `    <div class="patron-name">\\n` +\n' +
+    //         '                    `        ${name}\\n` +\n' +
+    //         '                    `    </div>\\n` +\n' +
+    //         '                    `    <div class="patron-tier">\\n` +\n' +
+    //         '                    `        ${tier}\\n` +\n' +
+    //         '                    `    </div>\\n` +\n' +
+    //         '                    `    <div class=patron-amount>\\n` +\n' +
+    //         '                    `        #${loop}\\n` +\n' +
+    //         '                    `    </div>\\n` +\n' +
+    //         '                    `</div>`\n' +
+    //         '                if (ii >= 16) {\n' +
+    //         '                    break;\n' +
+    //         '                }\n' +
+    //         '                loop++;\n' +
+    //         '            }\n' +
+    //         '            let board = document.getElementById("patrons");\n' +
+    //         '            board.innerHTML += patrons_html;\n' +
+    //         '            board.style.display = "block";\n' +
+    //         '        }\n' +
+    //         '\n' +
+    //         '        show_patrons().then();');
+    // } else {
+    //     var board = document.getElementById("patrons");
+    //     board.innerHTML = "<div class=\"patron\">There would be a cool list of Patrons here if you weren't using a " +
+    //         "terrible embedded browser from 2004."
+    //     board.style.display = "block";
+    // }
 };
 
